@@ -1,0 +1,141 @@
+/* GameOver.css */
+.gameover-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2.5rem;
+  text-align: center;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.gameover-container h2 {
+  font-size: 2.2rem;
+  color: #3a86ff;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+}
+
+.gameover-container h2::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #3a86ff, #8338ec);
+  border-radius: 2px;
+}
+
+.gameover-container p {
+  font-size: 1.1rem;
+  color: #e2e2e2;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.score-highlight {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #ffbe0b;
+  background: rgba(255, 190, 11, 0.1);
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+}
+
+.gameover-container img {
+  width: 180px;
+  height: auto;
+  margin: 1.5rem 0;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+  transition: transform 0.3s ease;
+}
+
+.gameover-container img:hover {
+  transform: scale(1.05) rotate(-5deg);
+}
+
+.gameover-container button {
+  background: linear-gradient(135deg, #3a86ff, #8338ec);
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(58, 134, 255, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.gameover-container button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(58, 134, 255, 0.4);
+}
+
+.gameover-container button::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0) 60%
+  );
+  transform: rotate(30deg);
+  transition: transform 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.gameover-container button:hover::after {
+  transform: rotate(30deg) translate(10%, 20%);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .gameover-container {
+    padding: 2rem;
+    margin: 2rem 1rem;
+  }
+
+  .gameover-container h2 {
+    font-size: 1.8rem;
+  }
+
+  .gameover-container img {
+    width: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gameover-container {
+    padding: 1.5rem;
+  }
+
+  .gameover-container h2 {
+    font-size: 1.6rem;
+  }
+
+  .gameover-container p {
+    font-size: 1rem;
+  }
+
+  .gameover-container button {
+    padding: 0.7rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}

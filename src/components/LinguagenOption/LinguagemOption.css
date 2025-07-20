@@ -1,0 +1,222 @@
+.language-options-container {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+  background-color: transparent !important;
+}
+
+.language-title {
+  font-size: 2rem;
+  color: #3c6b99;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  position: relative;
+  display: inline-block;
+}
+
+.language-title::after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 2px;
+  background: linear-gradient(90deg, #3498db, rgba(52, 152, 219, 0.2));
+  bottom: -10px;
+  left: 25%;
+  border-radius: 3px;
+}
+
+.language-cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.language-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  box-shadow:
+    0 4px 15px rgba(0, 0, 0, 0.03),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+  transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+  border: 1px solid rgba(222, 226, 230, 0.15);
+  position: relative;
+  overflow: hidden;
+  width: 350px;
+}
+
+.language-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(52, 152, 219, 0.3),
+    transparent
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.language-card:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.1),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+}
+
+.language-card:hover::before {
+  opacity: 1;
+}
+
+/* Ícones com efeito refinado */
+.language-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.language-card:hover .language-icon {
+  transform: scale(1.1);
+}
+
+.icons {
+  width: 70px;
+  height: 70px;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+  transition: filter 0.3s ease;
+}
+
+.language-card:hover .icons {
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+}
+
+.html-icon {
+  color: #e5542c;
+  text-shadow: 0 2px 4px rgba(229, 84, 44, 0.2);
+}
+
+.css-icon {
+  color: #1b75b8;
+  text-shadow: 0 2px 4px rgba(27, 117, 184, 0.2);
+}
+
+.js-icon {
+  color: #f7e025;
+  text-shadow: 0 2px 4px rgba(247, 224, 37, 0.3);
+  position: relative;
+}
+
+.language-card:hover .js-icon::after {
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.language-card h3 {
+  color: #c3dcff7d;
+  margin-bottom: 0.8rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.language-card:hover h3 {
+  color: #c3dcff;
+}
+
+.language-card p {
+  color: #ffffff85;
+  font-size: 0.95rem;
+  margin-bottom: 1.8rem;
+  line-height: 1.5;
+  transition: color 0.3s ease;
+}
+
+.language-card:hover p {
+  color: #ffffff;
+}
+
+.language-select-btn {
+  background: linear-gradient(
+    135deg,
+    rgba(52, 152, 219, 0.9),
+    rgba(41, 128, 185, 0.9)
+  );
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+  box-shadow:
+    0 2px 5px rgba(41, 128, 185, 0.3),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.language-select-btn::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0) 60%
+  );
+  transform: rotate(30deg);
+  transition: transform 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.language-select-btn:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(41, 128, 185, 0.95),
+    rgba(52, 152, 219, 0.95)
+  );
+  box-shadow:
+    0 4px 12px rgba(41, 128, 185, 0.4),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.language-select-btn:hover::after {
+  transform: rotate(30deg) translate(10%, 20%);
+}
+
+@media screen and (min-width: 768px) {
+  .language-options-container {
+    backdrop-filter: blur(12px);
+    background: rgba(245, 247, 250, 0.1);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .language-card {
+    width: 90%;
+  }
+}

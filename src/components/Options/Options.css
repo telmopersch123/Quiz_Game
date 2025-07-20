@@ -1,0 +1,87 @@
+/* Options.css */
+.option {
+  padding: 1.2rem 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-bottom: 0.8rem;
+  backdrop-filter: blur(5px);
+}
+
+.option:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.option p {
+  color: #f8fafc;
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+  pointer-events: none;
+}
+
+/* Correct answer styling */
+.option.correct {
+  background: rgba(74, 222, 128, 0.15);
+  border: 1px solid rgba(74, 222, 128, 0.3);
+  /* animation: pulseCorrect 0.5s ease; */
+}
+
+.option.correct p {
+  color: #4ade80;
+}
+
+/* Wrong answer styling */
+.option.wrong {
+  background: rgba(248, 113, 113, 0.15);
+  border: 1px solid rgba(248, 113, 113, 0.3);
+}
+.animationWrong {
+  animation: pulseWrong 0.3s ease;
+}
+
+.option.wrong p {
+  color: #f87171;
+}
+
+@keyframes pulseWrong {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-5px);
+  }
+  40% {
+    transform: translateX(5px);
+  }
+  60% {
+    transform: translateX(-5px);
+  }
+  80% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .option {
+    padding: 1rem 1.2rem;
+  }
+
+  .option p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .option {
+    padding: 0.9rem 1rem;
+  }
+}

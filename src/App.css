@@ -1,0 +1,22 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.title-initial {
+  font-size: clamp(1.5rem, 5vw, 2.5rem); /* Responsividade fluída */
+  margin: 0 auto 1rem;
+  text-align: center;
+  line-height: 1.3;
+}
+
+/* Ajustes específicos para telas pequenas */
+@media (max-width: 480px) {
+  .title-initial {
+    margin-bottom: 0.8rem;
+    padding: 0 1rem; /* Prevenção de overflow */
+  }
+}
